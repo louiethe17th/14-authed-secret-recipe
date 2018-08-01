@@ -125,9 +125,9 @@ public class UserDB {
             }
 
             int id = results.getInt("id");
-            String username = results.getString("username");
-            String passhash = results.getString("passhash");
-            String bio = results.getString("bio");
+            String username = results.getString("username").trim();
+            String passhash = results.getString("passhash").trim();
+            String bio = results.getString("bio").trim();
 
             User user = new User(id, username, passhash, bio);
             return user;
